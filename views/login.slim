@@ -3,11 +3,15 @@ form method="post" action="/login"
 		div
 			span Username
 			span
-				input type="text" name="username"
+				input type="text" name="username" class=(@error? 'error' : '')
 		div
 			span Password
 			span
-				input type="password" name="password"
+				input type="password" name="password" value=""  class=(@error? 'error' : '')
 		div
-			span align="center"
+			span class="center"
 				input type="submit"
+		div
+		- if @error 
+  			span class="error" 
+  			 	 ==@error

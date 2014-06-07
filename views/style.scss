@@ -1,12 +1,31 @@
 $red: #903;
 $black: #444;
 $white: #fff;
+$grey: #888;
 $main-font: 32px/1 Helvetica, Arial, sans-serif;
+
+div {
+  height: 35px  
+}
 
 h1 {
     color: $red;
     font: $main-font
 }
+
+span.error, select.error {
+    color: $red;
+    font-style:italic;
+}
+
+input, select {
+    box-shadow: 5px 5px 5px $grey;
+}
+
+input.error {
+    box-shadow: 5px 5px 5px $red;
+}
+
 
 header h1 {
     font-size: 40px;
@@ -58,6 +77,14 @@ div.login {
     margin: auto;
 }
 
+span.center {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
 .test {
-   border-style: solid;
+    text-align: center;
+    border:5px solid red;
+    width: 100%
 }
