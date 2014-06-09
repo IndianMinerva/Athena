@@ -1,26 +1,52 @@
-div
-	div
-		span Title
-		span 
-			input type="text" name="title"
-	div
-		span Author
-		span
-			input type="text" name="author"
-	div
-		span Genre
-		span
-			select multiple="true"
-				  option value="horror"    Horror				  
-				  option value="humour"    Humour				  
-				  option value="thriller"  Thriller
-	div
-		span Rating
-		span
-			select
-				   option value="0" 0
-				   option value="1" 1
-				   option value="2" 2
-				   option value="3" 3
-				   option value="4" 4
-				   option value="5" 5
+div class="content border"
+	div style="float:left"
+		div
+			span class="newbook" Title
+			span 
+				input type="text" name="title"
+		div
+			span class="newbook" Author
+			span
+				input type="text" name="author"
+		div
+			span class="newbook" Price
+			span
+				input type="text" name="price" $
+		div
+			span class="newbook" Type
+			span
+				select name="type"
+					option value="" selected="true"     --    
+					option value="ebook" Ebook
+					option value="paper" Paperback
+					option value="hard" Hardbound
+					option value="imported" Imported
+		div 
+			span class="newbook" Publisher
+			span 
+				input type="text" name="publisher"
+		div 
+			span class="newbook" Language
+			span 
+				input type="text" name="language"
+		div 
+			span class="newbook" Length
+			span 
+				input type="text" name="pages" (pages)
+		
+	div style="float:right"
+		div 
+			span class="newbook" Description
+			span
+				textarea name="desc" cols="60" rows="10"
+		div 
+			span class="newbook" Genre
+			span
+				select multiple="true"
+					  option value="horror"    Horror				  
+					  option value="humour"    Humour				  
+					  option value="thriller"  Thriller
+	div style="clear:both;"	
+
+	div class="center" style="padding: 0px 0px 0px 0px;"
+		input type="submit" value="Add book"			

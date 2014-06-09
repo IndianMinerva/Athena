@@ -4,13 +4,14 @@ $white: #fff;
 $grey: #888;
 $main-font: 32px/1 Helvetica, Arial, sans-serif;
 
-div {
-  height: 35px  
-}
-
 h1 {
     color: $red;
     font: $main-font
+}
+
+.border {
+  border: 5px double $red;
+  padding: 35px 5px 0px 15px;
 }
 
 span.error, select.error {
@@ -18,14 +19,16 @@ span.error, select.error {
     font-style:italic;
 }
 
-input, select {
+input, select, textarea {
     box-shadow: 5px 5px 5px $grey;
+    margin: 5px 5px 5px 5px; 
+    //width : 230px
 }
 
-input.error {
+input.error select.error, textarea.error {
     box-shadow: 5px 5px 5px $red;
+    margin: 25px 50px 75px 100px; 
 }
-
 
 header h1 {
     font-size: 40px;
@@ -64,27 +67,30 @@ p {
    font: 13px/1.4 $main-font;
 }
 
-div.login {
-    width: 400px;
-    height: 100px;
-
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    margin: auto;
+.content {
+  width: 80%;
+  content: 80%; 
+  margin: 0 auto
 }
 
-span.center {
+span {
+  vertical-align: top;
+  margin: 5px 5px 5px 5px;
+}
+
+.newbook {
+display: inline-block;
+  width: 100px;
+}
+
+.center {
     text-align: center;
     display: inline-block;
     width: 100%;
 }
 
 .test {
-    text-align: center;
-    border:5px solid red;
-    width: 100%
+    //text-align: center;
+    border:2px solid red;
+    //width: 100%
 }

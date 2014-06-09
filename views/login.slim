@@ -1,17 +1,17 @@
 form method="post" action="/login"
-	div class="login"
-		div
-			span Username
+	div class="content border" style="width:350; margin: 400px auto;"
+		div style="height: 35px"
+			span class="login" Username
 			span
 				input type="text" name="username" class=(@error? 'error' : '')
-		div
-			span Password
+		div style="height: 35px"
+			span class="login" Password
 			span
 				input type="password" name="password" value=""  class=(@error? 'error' : '')
-		div
+		div style="height: 35px"
 			span class="center"
-				input type="submit"
-		div
-		- if @error 
-  			span class="error" 
-  			 	 ==@error
+				input type="submit" value="Login"
+		div style="height: 35px"
+			- if @error 
+  				span class="error center" 
+  			 		==@error

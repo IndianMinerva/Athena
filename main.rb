@@ -29,6 +29,7 @@ post '/login' do
 end
 
 get '/book' do
+	@title="New Book"
 	if session["user"]
 		slim :new_book
 	else
