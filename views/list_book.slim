@@ -1,0 +1,22 @@
+-space="&nbsp;"
+div style="display:table"
+	div style="display: table-row"
+		div class="table-cell" Title
+		div class="table-cell" Author
+		div class="table-cell" Price
+		div class="table-cell" Type
+		div class="table-cell" Publisher
+		div class="table-cell" Language
+		div class="table-cell" Pages
+		div class="table-cell" Genere
+	-@books.each_with_index do |book, index|
+		div style="display: table-row" class=(index%2 == 0 ? "odd" : "even")
+			div class="table-cell" 
+				a href=("/book/" + book.id)    ==book[:title]
+			div class="table-cell" ==book[:author]			
+			div class="table-cell" ==book[:price] 
+			div class="table-cell" ==book[:type]			
+			div class="table-cell" ==book[:publisher]			
+			div class="table-cell" ==book[:language]
+			div class="table-cell" ==book[:pages]
+			div class="table-cell" ==book[:genere]

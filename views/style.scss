@@ -94,3 +94,14 @@ display: inline-block;
     border:2px solid red;
     //width: 100%
 }
+
+.table-cell {
+  display : table-cell;
+  padding: 0px 10px 0px 10px;
+  border:1px solid $grey;
+  empty-cells: show;
+}
+
+.even {
+  background-color: $grey;
+}

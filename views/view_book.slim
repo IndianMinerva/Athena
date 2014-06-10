@@ -4,53 +4,45 @@ form method="post" enctype='multipart/form-data' action="/book"
 			div
 				span class="newbook" Title
 				span 
-					input type="text" name="title"
+					==@book.title
 			div
 				span class="newbook" Author
 				span
-					input type="text" name="author"
+					==@book.title
 			div
 				span class="newbook" Price
 				span
-					input type="text" name="price" $
+					==@book.price
 			div
 				span class="newbook" Type
 				span
-					select name="type"
-						option value="" selected="true"     --    
-						option value="ebook" Ebook
-						option value="paper" Paperback
-						option value="hard" Hardbound
-						option value="imported" Imported
+					==@book.type
 			div 
 				span class="newbook" Publisher
 				span 
-					input type="text" name="publisher"
+					==@book.publisher
 			div 
 				span class="newbook" Language
 				span 
-					input type="text" name="language"
+					==@book.language
 			div 
 				span class="newbook" Length
 				span 
-					input type="text" name="pages" (pages)
+					==@book.pages
 			div 
 				span class="newbook" Coverpage
 				span 
-					input type="file" name="cover"
+					==@book.cover
 			
 		div style="float:right"
 			div 
 				span class="newbook" Description
 				span
-					textarea name="desc" cols="60" rows="10"
+					==@book.desc
 			div 
 				span class="newbook" Genre
 				span
-					select multiple="true" name="genere"
-						  option value="horror"    Horror				  
-						  option value="humour"    Humour				  
-						  option value="thriller"  Thriller
+					==@book.genere
 		div style="clear:both;"	
 
 		div class="center" style="padding: 0px 0px 0px 0px;"
