@@ -8,7 +8,7 @@ form method="post" enctype='multipart/form-data' action="/book"
 			div
 				span class="newbook" Author
 				span
-					==@book.title
+					==@book.author
 			div
 				span class="newbook" Price
 				span
@@ -32,7 +32,7 @@ form method="post" enctype='multipart/form-data' action="/book"
 			div 
 				span class="newbook" Coverpage
 				span 
-					==@book.cover
+					img src=("/cover/" + @book.id + "/" + @book.cover_name)
 			
 		div style="float:right"
 			div 

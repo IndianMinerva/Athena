@@ -40,7 +40,6 @@ end
 
 get '/book/:id' do
 	@book = Book.find(params['id'])
-	@book.to_s
 	if @book.nil?
 		"No such book"
 	else
@@ -60,7 +59,15 @@ post '/book' do
 	book.keys.to_s
 end
 
-get '/book/list' do
+get '/cover/:id/cover' do
+	book = Book.find(params['id'])
+
+	content_type 'image/jpeg'
+	#content_length book.cover.length
+	response.write(book.cover)
+end
+
+get '/books' do
 	@books = Book.all
 	slim :list_book
 end
